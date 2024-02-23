@@ -19,6 +19,15 @@ class RapidTestOrder {
           aReturn.push("Come again next time!")
         }
         return aReturn;
+      },
+      ORDERING: (sInput) => {
+        let aReturn = [];
+        this.isDone = true;
+        if (sInput.toLowerCase(). startsWith ('c', 'm', 'v')){
+            aReturn.push ("Yum! Your order is complete.");
+            aReturn.push ("Please pick up your order at 31 Sunny Drive, Brantford, Ontario!");
+            return aReturn;
+        }
       }
     };
 
