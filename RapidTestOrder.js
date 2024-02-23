@@ -5,20 +5,18 @@ class RapidTestOrder {
         let aReturn = [];
         this.stateCur = this.OrderState.RESERVING;
         aReturn.push("Welcome to Emma's Coffee House!");
-        aReturn.push("What size coffee would you like?");
+        aReturn.push("Would you like to order a coffee?");
         return aReturn;
       },
       RESERVING: (sInput) => {
         let aReturn = [];
         this.isDone = true;
         if (sInput.toLowerCase().startsWith('y')) {
-          aReturn.push(`Your rapid test is reserved under the phone number ${this.sFrom}`);
-          let d = new Date();
-          d.setMinutes(d.getMinutes() + 120);
-          aReturn.push(`Please pick it up at 123 Tidy St., Acton before ${d.toTimeString()}`);
+          aReturn.push("Awesome! What flavour syrup would you like?");
+          aReturn.push("We have caramel, mocha, or vanilla.");
         } else {
-          aReturn.push("Thanks for trying our reservation system");
-          aReturn.push("Maybe next time")
+          aReturn.push("Thanks for visiting Emma's Coffee House!");
+          aReturn.push("Come again next time!")
         }
         return aReturn;
       }
