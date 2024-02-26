@@ -23,13 +23,21 @@ class RapidTestOrder {
       ORDERING: (sInput) => {
         let aReturn = [];
         this.isDone = true;
-        if (sInput.toLowerCase(). startsWith ('c', 'm', 'v')){
+        if (sInput.toLowerCase(). startsWith ('caramel')){
+            aReturn.push ("Yum! Your order is complete.");
+            aReturn.push ("Please pick up your order at 31 Sunny Drive, Brantford, Ontario!");
+        } else
+          if (sInput.toLowerCase(). startsWith ('mocha')){
+            aReturn.push ("Yum! Your order is complete.");
+            aReturn.push ("Please pick up your order at 31 Sunny Drive, Brantford, Ontario!");  
+        } else 
+        if (sInput.toLowerCase(). startsWith ('vanilla')){
             aReturn.push ("Yum! Your order is complete.");
             aReturn.push ("Please pick up your order at 31 Sunny Drive, Brantford, Ontario!");
             return aReturn;
         }
-      }
-    };
+      };
+
 
     this.stateCur = this.OrderState.WELCOMING;
     this.isDone = false;
